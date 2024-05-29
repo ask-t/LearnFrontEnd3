@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const EditTicketForm = ({ ticket }: {ticket: any}) => {
+const EditTicketForm = ({ ticket }) => {
   const EDITMODE = ticket._id === "new" ? false : true;
   const router = useRouter();
   const startingTicketData = {
@@ -25,7 +25,7 @@ const EditTicketForm = ({ ticket }: {ticket: any}) => {
 
   const [formData, setFormData] = useState(startingTicketData);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     const value = e.target.value;
     const name = e.target.name;
 
@@ -35,7 +35,7 @@ const EditTicketForm = ({ ticket }: {ticket: any}) => {
     }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (EDITMODE) {
@@ -96,7 +96,7 @@ const EditTicketForm = ({ ticket }: {ticket: any}) => {
           onChange={handleChange}
           required={true}
           value={formData.description}
-          rows={5}
+          rows="5"
         />
         <label>Category</label>
         <select

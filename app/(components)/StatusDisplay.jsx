@@ -1,5 +1,5 @@
-const StatusDisplay = ({ status }: { status: any }) => {
-  const getColor = (status: any) => {
+const StatusDisplay = ({ status }) => {
+  const getColor = (status) => {
     let color;
     switch (status.toLowerCase()) {
       case "done":

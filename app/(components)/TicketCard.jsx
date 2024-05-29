@@ -4,9 +4,9 @@ import DeleteBlock from "./DeleteBlock";
 import ProgressDisplay from "./ProgressDisplay";
 import Link from "next/link";
 
-const TicketCard = ({ ticket }: { ticket: any }) => {
-  function formatTimestamp(timestamp: any) {
-    const options: Intl.DateTimeFormatOptions = {
+const TicketCard = ({ ticket }) => {
+  function formatTimestamp(timestamp) {
+    const options = {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
